@@ -14,7 +14,7 @@ export async function getServerSideProps(context) {
     .orderBy('createdAt', 'desc')
     .limit(LIMIT);
 
-    ///TEST sdfsdfsdfsdf asdsadsd
+  
 
   const posts = (await postsQuery.get()).docs.map(postToJSON);
 
