@@ -2,7 +2,7 @@ import Link from 'next/Link';
 import ReactMarkdown from 'react-markdown'
 
 export default function PostContent({post }) {
-    const createdAt = typeof post?.createdAt === 'number' ? new Date(post.createdAt) : post.createdAt.toDate;
+    const createdAt = typeof post?.createdAt === 'number' ? new Date(post.createdAt) : post.createdAt.toDate();
 
     return (
         <div className="card">
@@ -12,7 +12,7 @@ export default function PostContent({post }) {
             <Link href={`/${post.username}/`}>
               <a className="text-info">@{post.username}</a>
             </Link>{' '}
-            on {createdAt.toISOString()}
+            on {createdAt.toISOString('YYYY-MM-DD')}
           </span>
           <ReactMarkdown>{post?.content}</ReactMarkdown>
         </div>

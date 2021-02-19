@@ -51,6 +51,6 @@ const firebaseConfig = {
       return {
           ...data,
           createdAt: data.createdAt.toMillis() || 0,
-          updatedAt: data.updated.toMillis() || 0,
+          updatedAt: data.updatedAt.toMillis() || 0,
       };
   }
